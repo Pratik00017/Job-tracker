@@ -22,7 +22,7 @@ function Dashboard() {
 
   const fetchJobs = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/jobs', { headers });
+      const res = await axios.get('https://job-tracker-qtjd.onrender.com/api/jobs', { headers });
       setJobs(res.data);
     } catch (err) { console.log(err); }
   };
@@ -30,9 +30,9 @@ function Dashboard() {
   const handleSubmit = async () => {
     try {
       if (editingJob) {
-        await axios.put(`http://localhost:5000/api/jobs/${editingJob._id}`, form, { headers });
+        await axios.put(`https://job-tracker-qtjd.onrender.com/api/jobs/${editingJob._id}`, form, { headers });
       } else {
-        await axios.post('http://localhost:5000/api/jobs', form, { headers });
+        await axios.post('https://job-tracker-qtjd.onrender.com/api/jobs', form, { headers });
       }
       setForm({ company: '', role: '', status: 'Applied', notes: '', interviewDate: '' });
       setShowForm(false);
@@ -43,7 +43,7 @@ function Dashboard() {
 
   const handleDelete = async (id) => {
     if (window.confirm('Delete this job?')) {
-      await axios.delete(`http://localhost:5000/api/jobs/${id}`, { headers });
+      await axios.delete(`https://job-tracker-qtjd.onrender.com/api/jobs/${id}`, { headers });
       fetchJobs();
     }
   };
@@ -57,7 +57,7 @@ function Dashboard() {
   const getTips = async (job) => {
     setLoadingTips(prev => ({ ...prev, [job._id]: true }));
     try {
-      const res = await axios.post('http://localhost:5000/api/tips',
+      const res = await axios.post('https://job-tracker-qtjd.onrender.com/api/tips',
         { company: job.company, role: job.role },
         { headers }
       );
