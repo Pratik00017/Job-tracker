@@ -3,7 +3,7 @@
 A full-stack web application that helps students track their job applications during campus placements, with AI-powered interview tips for each company.
 
 ## Live Demo
-🔗 [Live App](https://your-vercel-url.vercel.app)
+🔗 [Live App](https://job-tracker-kvf5.vercel.app/)
 
 ## Screenshots
 ![Dashboard](screenshot-url)
