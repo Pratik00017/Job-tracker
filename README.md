@@ -38,3 +38,40 @@ A full-stack web application that helps students track their job applications du
 
 ### Backend Setup
 ```bash
+cd backend
+npm install
+node server.js
+```
+
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm start
+```
+
+## Environment Variables
+
+Create a `.env` file in the backend folder:
+```
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+OPENROUTER_API_KEY=your_openrouter_key
+PORT=5000
+```
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/auth/register | Register new user |
+| POST | /api/auth/login | Login user |
+| GET | /api/jobs | Get all jobs |
+| POST | /api/jobs | Add new job |
+| PUT | /api/jobs/:id | Update job |
+| DELETE | /api/jobs/:id | Delete job |
+| POST | /api/tips | Get AI interview tips |
+
+## Developer
+**Pratik Vairagade**
+- GitHub: [@Pratik00017](https://github.com/Pratik00017)
